@@ -12,7 +12,8 @@ function classNames(...classes) {
 
 const links = [
 	{ label: 'Story', href: '/story' },
-	{ label: 'Recipes', href: '/recipes' }
+	{ label: 'Recipes', href: '/recipes' },
+	{ label: 'Blog', href: '/blog'}
 ]
 
 export default function NavBarSearch() {
