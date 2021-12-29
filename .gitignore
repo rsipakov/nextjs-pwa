@@ -1,0 +1,76 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+/compare
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# next-pwa
+**/public/workbox**
+**/public/sw**
+
+# misc
+*.log
+.DS_Store
+public/sitemap.xml
+public/feed.xml
+
+# vercel
+.vercel
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# post build
+/public/*.xml
+/public/images
+
+# Contentlayer
+.contentlayer
+
+# cache
+/.cache
+
+# PWA auto-generated files
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
+
+# IntelliJ
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+.idea/
+*.iml
+modules.xml
+*.ipr
+*.iws
+
+# JIRA plugin for IntelliJ
+atlassian-ide-plugin.xml
+
+# CMake "https://cmake.org"
+cmake-build-*/
+
+
+
+
+
+
+
+
+
+
