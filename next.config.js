@@ -1,6 +1,7 @@
 const withPlugins = require('next-compose-plugins');
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
+const { withContentlayer } = require('next-contentlayer');
 
 module.exports = withPlugins([
 	[withPWA({
@@ -9,5 +10,6 @@ module.exports = withPlugins([
 			runtimeCaching,
 			skipWaiting: true,
 		},
-	})]
+	})],
+	[withContentlayer()]
 ]);
