@@ -2,6 +2,7 @@ import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 export default function ThemeToggle() {
+
 	const [mounted, setMounted] = useState(false);
 	const { resolvedTheme, setTheme } = useTheme();
 	// After mounting, we have access to the theme
@@ -11,7 +12,7 @@ export default function ThemeToggle() {
 			<button
 				aria-label="Toggle Dark Mode"
 				type="button"
-				className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-zinc-400 flex items-center justify-center  hover:ring-2 ring-zinc-400  transition-all"
+				className="w-9 h-9 bg-zinc-200 rounded-lg dark:bg-zinc-400 flex items-center justify-center hover:ring-2 ring-zinc-400 transition-all"
 				onClick={() =>
 					setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
 				}
