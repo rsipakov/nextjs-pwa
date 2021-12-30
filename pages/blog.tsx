@@ -6,6 +6,8 @@ import { pick } from '@/lib/utils';
 import { allBlogs } from '.contentlayer/data';
 import LayoutWrapper from '@/components/LayoutWrapper';
 import Section from '@/components/section'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 export default function Blog({
 															 posts
@@ -14,13 +16,13 @@ export default function Blog({
 	const filteredBlogPosts = posts.filter((post) =>
 		post.title.toLowerCase().includes(searchValue.toLowerCase())
 	);
-
+	const { t } = useTranslation('common');
 	return (
 		<LayoutWrapper>
 		<Section>
 			<div className="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16">
 				<h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
-					Blog
+					{t('blog.title')}
 				</h1>
 				<p className="mb-4 text-gray-600 dark:text-gray-400">
 					{`I've been writing online since 2014, mostly about web development and tech careers.
@@ -79,13 +81,17 @@ export default function Blog({
 	);
 }
 
-export function getStaticProps() {
+export async function getStaticProps({ locale }) {
 	const posts = allBlogs
 		.map((post) => pick(post, ['slug', 'title', 'summary', 'publishedAt']))
 		.sort(
 			(a, b) =>
 				Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
 		);
-
-	return { props: { posts } };
+	return {
+		props: {
+			...await serverSideTranslations(locale, ['common']),
+			posts
+		}
+	};
 }

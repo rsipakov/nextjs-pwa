@@ -2,5 +2,8 @@
   "siteName": "Rice Bowl",
   "index": {
 	"title": "We grow a lot of rice."
+  },
+  "blog": {
+	"title": "Blog"
   }
 }
