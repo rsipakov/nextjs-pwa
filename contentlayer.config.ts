@@ -11,6 +11,11 @@ import rehypeCodeTitles from 'rehype-code-titles'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrism from 'rehype-prism-plus'
 
+const getLocale = (path) => {
+	const pathArray = path.split('.')
+	return pathArray.length > 2 ? pathArray.slice(-2)[0] : 'en'
+}
+
 const computedFields: ComputedFields = {
 	readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
 	wordCount: {
@@ -27,12 +32,13 @@ const computedFields: ComputedFields = {
 	},
 	slug: {
 		type: 'string',
-		resolve: (doc) => doc._raw.sourceFileName.replace(/(\.ru)?\.mdx$/, ''),
+		resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, '')
 	},
 	locale: {
 		type: 'string',
-		resolve: (doc) =>
-			doc._raw.sourceFileName.endsWith('.ru.mdx') ? 'ru' : 'en',
+		resolve: (doc) => {
+			return getLocale(doc._raw.sourceFilePath)
+		},
 	},
 }
 
