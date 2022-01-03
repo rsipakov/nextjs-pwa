@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes'
 
-export default function ThemeChanger() {
+export default function ThemeChanger({ label }) {
 	const { theme, setTheme } = useTheme()
 	return (
 			<div className="py-5 flex flex-col items-center justify-center">
@@ -10,7 +10,7 @@ export default function ThemeChanger() {
 						setTheme(theme === 'light' ? 'dark' : 'light')
 					}}
 				>
-					Change Theme
+					{`${label}`}
 				</button>
 			</div>
 

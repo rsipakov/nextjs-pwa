@@ -1,7 +1,7 @@
 import LayoutWrapper from '@/components/LayoutWrapper'
 import Section from '@/components/section'
 import ThemeChanger from '@/components/ThemeChanger'
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Index = () => {
@@ -9,7 +9,9 @@ const Index = () => {
 	return (
 		<LayoutWrapper>
 			<Section>
-				<ThemeChanger />
+				<ThemeChanger
+					label={t('themeChanger')}
+				/>
 				<h2 className='text-xl font-semibold text-zinc-800 dark:text-zinc-200'>
 					{t('index.title')}
 				</h2>
