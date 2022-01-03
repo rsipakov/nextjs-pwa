@@ -13,7 +13,7 @@ function classNames(...classes) {
 const links = [
 	{ label: 'Story', href: '/story' },
 	{ label: 'Recipes', href: '/recipes' },
-	{ label: 'Blog', href: '/blog'}
+	{ label: 'Blog', href: '/blog' }
 ]
 
 export default function NavBarSearch() {
@@ -33,7 +33,7 @@ export default function NavBarSearch() {
 
 										{/* Logo in mobile view */}
 										{/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-										<a href="/">
+										<a href='/'>
 											{/* eslint-disable-next-line @next/next/no-img-element */}
 											<img
 												className='block lg:hidden h-8 w-auto'
@@ -44,7 +44,7 @@ export default function NavBarSearch() {
 
 										{/* Logo in large view */}
 										{/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-										<a href="/">
+										<a href='/'>
 											{/* eslint-disable-next-line @next/next/no-img-element */}
 											<img
 												className='hidden lg:block h-8 w-auto'
@@ -97,12 +97,13 @@ export default function NavBarSearch() {
 								</div>
 								*/}
 
-								{/*Right side view in large screen*/}
+								{/*Right side view in the Large screen*/}
 								<div className='hidden lg:ml-4 lg:flex lg:items-center'>
+									{/*Locales selector in the Large view*/}
 									<div className='px-4'>
-									<LocaleSelect />
+										<LocaleSelect />
 									</div>
-									{/*Theme toggle in large view*/}
+									{/*Theme toggle in the Large view*/}
 									<ThemeToggle />
 									<button
 										type='button'
@@ -171,8 +172,12 @@ export default function NavBarSearch() {
 									</Menu>
 								</div>
 
-								{/* Right side view in Mobile screen*/}
+								{/* Right side view in the Mobile screen*/}
 								<div className='flex items-center lg:hidden'>
+									{/*Locales selector in the Mobile view*/}
+									<div className='flex items-center'>
+										<LocaleSelect />
+									</div>
 									{/*Theme toggle in mobile menu*/}
 									<div className='flex items-center px-2'>
 										<ThemeToggle />
