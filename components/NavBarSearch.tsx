@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { SearchIcon } from '@heroicons/react/solid'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import ThemeToggle from '@/components/ThemeToggle'
+import LocaleSelect from '@/components/LocaleSelect'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -12,7 +12,8 @@ function classNames(...classes) {
 
 const links = [
 	{ label: 'Story', href: '/story' },
-	{ label: 'Recipes', href: '/recipes' }
+	{ label: 'Recipes', href: '/recipes' },
+	{ label: 'Blog', href: '/blog'}
 ]
 
 export default function NavBarSearch() {
@@ -25,8 +26,12 @@ export default function NavBarSearch() {
 					<>
 						<div className='max-w-screen-lg mx-auto px-2 sm:px-4 lg:px-8'>
 							<div className='flex justify-between h-16'>
+
+								{/*Left side view*/}
 								<div className='flex px-2 lg:px-0'>
 									<div className='flex-shrink-0 flex items-center'>
+
+										{/* Logo in mobile view */}
 										{/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
 										<a href="/">
 											{/* eslint-disable-next-line @next/next/no-img-element */}
@@ -36,6 +41,8 @@ export default function NavBarSearch() {
 												alt='Workflow'
 											/>
 										</a>
+
+										{/* Logo in large view */}
 										{/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
 										<a href="/">
 											{/* eslint-disable-next-line @next/next/no-img-element */}
@@ -45,7 +52,10 @@ export default function NavBarSearch() {
 												alt='Workflxow'
 											/>
 										</a>
+
 									</div>
+
+									{/*Menu in large view */}
 									<div className='hidden lg:ml-6 lg:flex lg:space-x-8 space-x-6 flex items-center'>
 										{links.map(({ label, href }) => (
 											<Link key={label} href={href}>
@@ -61,7 +71,11 @@ export default function NavBarSearch() {
 											</Link>
 										))}
 									</div>
+
 								</div>
+
+								{/*Uncomment below if you need for search panel at navigation menu*/}
+								{/*
 								<div className='flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end'>
 									<div className='max-w-lg w-full lg:max-w-xs'>
 										<label htmlFor='search' className='sr-only'>
@@ -81,22 +95,14 @@ export default function NavBarSearch() {
 										</div>
 									</div>
 								</div>
-								<div className='lg:hidden flex items-center justify-end px-2'>
-									<ThemeToggle />
-								</div>
-								<div className='flex items-center lg:hidden'>
-									{/* Mobile menu button */}
-									<Disclosure.Button
-										className='w-9 h-9 bg-gray-200 rounded-lg dark:bg-zinc-400 flex items-center justify-center  hover:ring-2 ring-zinc-400  transition-all'>
-										<span className='sr-only'>Open main menu</span>
-										{open ? (
-											<XIcon className='w-5 h-5 text-zinc-900 dark:text-zinc-50' aria-hidden='true' />
-										) : (
-											<MenuIcon className='w-5 h-5 text-zinc-900 dark:text-zinc-50' aria-hidden='true' />
-										)}
-									</Disclosure.Button>
-								</div>
+								*/}
+
+								{/*Right side view in large screen*/}
 								<div className='hidden lg:ml-4 lg:flex lg:items-center'>
+									<div className='px-4'>
+									<LocaleSelect />
+									</div>
+									{/*Theme toggle in large view*/}
 									<ThemeToggle />
 									<button
 										type='button'
@@ -164,6 +170,25 @@ export default function NavBarSearch() {
 										</Transition>
 									</Menu>
 								</div>
+
+								{/* Right side view in Mobile screen*/}
+								<div className='flex items-center lg:hidden'>
+									{/*Theme toggle in mobile menu*/}
+									<div className='flex items-center px-2'>
+										<ThemeToggle />
+									</div>
+									{/* Mobile menu button */}
+									<Disclosure.Button
+										className='w-9 h-9 bg-gray-200 rounded-lg dark:bg-zinc-400 flex items-center justify-center  hover:ring-2 ring-zinc-400  transition-all'>
+										<span className='sr-only'>Open main menu</span>
+										{open ? (
+											<XIcon className='w-5 h-5 text-zinc-900 dark:text-zinc-50' aria-hidden='true' />
+										) : (
+											<MenuIcon className='w-5 h-5 text-zinc-900 dark:text-zinc-50' aria-hidden='true' />
+										)}
+									</Disclosure.Button>
+								</div>
+
 							</div>
 						</div>
 

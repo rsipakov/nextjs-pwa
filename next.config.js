@@ -1,10 +1,17 @@
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
+const withPlugins = require('next-compose-plugins');
+const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
+const { withContentlayer } = require('next-contentlayer');
+const { i18n } = require('./next-i18next.config');
 
-module.exports = withPWA({
-	pwa: {
-		dest: 'public',
-		runtimeCaching,
-		skipWaiting: true,
-	},
-})
+module.exports = withPlugins([
+	[withPWA({
+		pwa: {
+			dest: 'public',
+			runtimeCaching,
+			skipWaiting: true,
+		},
+		i18n,
+	})],
+	[withContentlayer()]
+]);
