@@ -32,7 +32,7 @@ const computedFields: ComputedFields = {
 	},
 	slug: {
 		type: 'string',
-		resolve: (doc) => doc._raw.sourceFileName.replace(/(\.ru)?\.mdx$/, ''),
+		resolve: (doc) => doc._raw.sourceFileName.replace(/(\.ru|\.ukr|\.es)?\.mdx$/, ''),
 	},
 	locale: {
 		type: 'string',

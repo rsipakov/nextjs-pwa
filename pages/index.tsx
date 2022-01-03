@@ -22,15 +22,6 @@ const Index = () => {
 					</span>{' '}
 						worldwide.
 					</p>
-					<br />
-					<p className='text-sm text-zinc-600 dark:text-zinc-400'>
-						<a
-							href='https://github.com/mvllow/next-pwa-template'
-							className='underline'
-						>
-							Source
-						</a>
-					</p>
 				</div>
 			</Section>
 		</LayoutWrapper>
