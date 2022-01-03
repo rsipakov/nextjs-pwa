@@ -12,11 +12,13 @@ _**PROJECT IN PROGRESS**_
 </p>
 
 ## Inspired by:
-- [Next PWA Template](https://github.com/mvllow/next-pwa-template) //Fluffless app template to inspire less
-- [leerob.io](https://github.com/leerob/leerob.io) //Lee Robinson's portfolio built with Next.js, Tailwind, Prisma, and Vercel.
+- [Next PWA Template](https://github.com/mvllow/next-pwa-template) // Fluffless app template to inspire less.
+- [leerob.io](https://github.com/leerob/leerob.io) // Lee Robinson's portfolio built with [Next.js](https://nextjs.org/), [Tailwind](https://tailwindcss.com/), [Prisma](https://www.prisma.io/), and [Vercel](https://vercel.com/).
+- [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) // A [Next.js](https://nextjs.org/), [Tailwind](https://tailwindcss.com/) blogging starter template.
 
 ## Features
 
-- [next.js](https://github.com/vercel/next.js) //The React Framework.
-- [next-themes](https://github.com/pacocoursey/next-themes) //An abstraction for themes in your Next.js app.
-- [PWA Plugin for Next.js](https://github.com/shadowwalker/next-pwa) //This zero config PWA plugin for Next.js is powered by workbox and other good stuff.
+- [Next.js](https://github.com/vercel/next.js)  // The React Framework.
+- [next-themes](https://github.com/pacocoursey/next-themes) // An abstraction for themes in your Next.js app.
+- [PWA Plugin for Next.js](https://github.com/shadowwalker/next-pwa) // This zero config PWA plugin for Next.js is powered by workbox and other good stuff.
+- [next-i18next](https://github.com/isaachinman/next-i18next) // The easiest way to translate your NextJs apps.
