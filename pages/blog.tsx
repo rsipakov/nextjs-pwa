@@ -26,10 +26,9 @@ export default function Blog({
 					<h1 className='mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'>
 						{t('blog.title')}
 					</h1>
-					<p className='mb-4 text-gray-600 dark:text-gray-400'>
-						{`I've been writing online since 2014, mostly about web development and tech careers.
-            In total, I've written ${posts.length} articles on my blog.
-            Use the search below to filter by title.`}
+					<p className='mb-4 text-zinc-600 dark:text-zinc-400'>
+						I have written <span className='font-bold'>{`${posts.length}`}</span> articles on my blog.
+            Use the search below to filter by title.
 					</p>
 					<div className='relative w-full mb-4'>
 						<input
@@ -60,9 +59,9 @@ export default function Blog({
 								Most Popular
 							</h3>
 							<BlogPost
-								title='Everything I Know About Style Guides, Design Systems, and Component Libraries'
-								summary="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
-								slug='style-guides-component-libraries-design-systems'
+								title='"Static link" and it work only with one locale.'
+								summary='Ultrices a gravida parturient bibendum suspendisse rhoncus consectetur euismod sem aptent interdum a pulvinar placerat eros mollis et accumsan ullamcorper ornare suspendisse iaculis a a pulvinar dolor nostra.'
+								slug='static-link'
 							 	tags={['popular']}/>
 						</>
 					)}
