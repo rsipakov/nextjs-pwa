@@ -17,7 +17,8 @@
 		"paths": {
 			"@/*": ["./*"]
 		},
-		"incremental": true /* Enable incremental compilation */
+		"incremental": true, /* Enable incremental compilation */
+	  	"downlevelIteration": true /* "new Set() with typescript" will work while targeting ES5, See more references: https://github.com/Microsoft/TypeScript/issues/21058 and https://stackoverflow.com/questions/33464504/using-spread-syntax-and-new-set-with-typescript*/
 	},
 	"exclude": ["node_modules"],
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]

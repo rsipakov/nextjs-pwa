@@ -7,6 +7,7 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 import Section from '@/components/section'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Tag from '@/components/Tag'
 
 export default function Blog({
 	posts,
@@ -62,15 +63,17 @@ export default function Blog({
 								title='Everything I Know About Style Guides, Design Systems, and Component Libraries'
 								summary="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
 								slug='style-guides-component-libraries-design-systems'
-							/>
+							 	tags={['popular']}/>
 						</>
 					)}
-					<h3 className='mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
+					<h3 className='mt-4 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
 						All Tags
 					</h3>
+					<div className="flex flex-wrap">
 					{tags.map((tag) => (
-						<span>{tag}</span>
+						<Tag key={tag} text={tag} />
 					))}
+					</div>
 					<h3 className='mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
 						All Posts
 					</h3>
