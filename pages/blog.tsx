@@ -9,8 +9,9 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Blog({
-															 posts
-														 }: InferGetStaticPropsType<typeof getStaticProps>) {
+	posts,
+	tags,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
 	const [searchValue, setSearchValue] = useState('')
 	const filteredBlogPosts = posts.filter((post) =>
 		post.title.toLowerCase().includes(searchValue.toLowerCase())
@@ -65,6 +66,12 @@ export default function Blog({
 						</>
 					)}
 					<h3 className='mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
+						All Tags
+					</h3>
+					{tags.map((tag) => (
+						<span>{tag}</span>
+					))}
+					<h3 className='mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
 						All Posts
 					</h3>
 					{!filteredBlogPosts.length && (
@@ -84,17 +91,24 @@ export default function Blog({
 export async function getStaticProps({ locale }) {
 	const posts = allBlogs
 		.map((post) =>
-			pick(post, ['slug', 'title', 'summary', 'publishedAt', 'locale'])
+			pick(post, ['slug', 'title', 'summary', 'publishedAt', 'locale', 'tags'])
 		)
 		.filter((post) => post.locale === locale)
 		.sort(
 			(a, b) =>
 				Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
 		)
+
+	const tags = [
+		...new Set(
+			...allBlogs.map((post) => pick(post, ['tags'])).map((x) => x.tags)
+		),
+	]
 	return {
 		props: {
-			...await serverSideTranslations(locale, ['common']),
-			posts
-		}
+			...(await serverSideTranslations(locale, ['common'])),
+			posts,
+			tags,
+		},
 	}
 }
