@@ -28,7 +28,6 @@ public/feed.xml
 .vercel
 
 # local env files
-.env
 .env.local
 .env.development.local
 .env.test.local
@@ -36,7 +35,7 @@ public/feed.xml
 
 # post build
 /public/*.xml
-/public/static/images
+/public/images
 
 # Contentlayer
 .contentlayer
@@ -65,6 +64,9 @@ atlassian-ide-plugin.xml
 
 # CMake "https://cmake.org"
 cmake-build-*/
+
+
+
 
 
 
