@@ -35,7 +35,7 @@ export default function BlogLayout({
 								className='rounded-full'
 							/>
 							<p className='ml-3 text-sm text-gray-700 dark:text-gray-300'>
-								{'Blog / '}
+								{'Index / '}
 								{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
 							</p>
 						</div>

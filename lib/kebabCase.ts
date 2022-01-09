@@ -1,8 +1,8 @@
-const kebabCase = (str) =>
-	str &&
-	str
-		.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-		.map((x) => x.toLowerCase())
-		.join('-')
+// Replaces the spaces between words with a dash.
+// Generate a slug just like GitHub does for markdown headings.
+
+import { slug } from 'github-slugger'
+
+const kebabCase = (str) => slug(str)
 
 export default kebabCase

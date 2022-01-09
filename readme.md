@@ -14,7 +14,7 @@ _**PROJECT IN PROGRESS**_
 ## Inspired by:
 - [Next PWA Template](https://github.com/mvllow/next-pwa-template) // Fluffless app template to inspire less.
 - [leerob.io](https://github.com/leerob/leerob.io) // Lee Robinson's portfolio built with [Next.js](https://nextjs.org/), [Tailwind](https://tailwindcss.com/), [Prisma](https://www.prisma.io/), and [Vercel](https://vercel.com/).
-- [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) // A [Next.js](https://nextjs.org/), [Tailwind](https://tailwindcss.com/) blogging starter template.
+- [Tailwind Nextjs Starter Index](https://github.com/timlrx/tailwind-nextjs-starter-blog) // A [Next.js](https://nextjs.org/), [Tailwind](https://tailwindcss.com/) blogging starter template.
 - [blog.maximeheckel.com](https://blog.maximeheckel.com/) // The awesome work by @MaximeHeckel;
 
 ## Features
