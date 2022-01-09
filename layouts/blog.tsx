@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from '@/components/Image'
 import { parseISO, format } from 'date-fns'
 import ViewCounter from '@/components/ViewCounter'
 import type { PropsWithChildren } from 'react'
