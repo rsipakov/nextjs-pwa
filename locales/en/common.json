@@ -4,9 +4,12 @@
 	"title": "We grow a lot of rice."
   },
   "blog": {
-	"title": "Blog"
-  },
-  "news": {
-	"title": "News"
+	"title": "Blog",
+	"allTags": "All Tags",
+	"allPosts": "All Articles",
+	"noFound": "No posts found",
+	"searchArticles": "Search articles",
+	"intro1": "I have written",
+	"intro2": "articles on my blog. Use the search below to filter by title."
   }
 }

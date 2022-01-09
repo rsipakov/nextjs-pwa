@@ -1,5 +1,5 @@
 const siteMetadata = {
-	siteName: { en: 'Rice Bowl', ru: 'Миска Риса', ukr: 'Миска Рису', es: 'Tazón de arroz' },
+	siteName: { en: 'Red cap', ru: 'Красная кепка', es: 'Gorra roja' },
 }
 
 module.exports = siteMetadata

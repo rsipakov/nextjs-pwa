@@ -4,9 +4,12 @@
 	"title": "Cultivamos mucho arroz."
   },
   "blog": {
-	"title": "El blog"
-  },
-  "news": {
-	"title": "Noticias"
+	"title": "El blog",
+	"allTags": "Todas las etiquetas",
+	"allPosts": "Todos los artículos",
+	"noFound": "No se ha encontrado ningún puesto",
+	"searchArticles": "Buscar artículos",
+	"intro1": "He escrito",
+	"intro2": "artículos en mi blog. Utiliza la búsqueda de abajo para filtrar por título."
   }
 }
