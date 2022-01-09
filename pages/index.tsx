@@ -1,6 +1,7 @@
 import LayoutWrapper from '@/components/LayoutWrapper'
 import Section from '@/components/section'
 import ThemeChanger from '@/components/ThemeChanger'
+import ThemeChangerMotion from '@/components/ButtonMotion'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
@@ -25,6 +26,7 @@ const Index = () => {
 						worldwide.
 					</p>
 				</div>
+				<ThemeChangerMotion />
 			</Section>
 		</LayoutWrapper>
 	)

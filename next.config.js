@@ -12,6 +12,12 @@ module.exports = withPlugins([
 			skipWaiting: true,
 		},
 		i18n,
+		images: {
+			domains: [
+				'i.scdn.co', // Spotify Album Art
+				'pbs.twimg.com' // Twitter Profile Picture
+			]
+		},
 	})],
 	[withContentlayer()]
 ]);

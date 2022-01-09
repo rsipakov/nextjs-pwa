@@ -5,9 +5,10 @@ import type { PropsWithChildren } from 'react'
 import type { Blog } from '.contentlayer/types'
 import Section from '@/components/section'
 import LayoutWrapper from '@/components/LayoutWrapper'
+import Tag from '@/components/Tag'
 
 const editUrl = (slug) =>
-	`https://github.com/leerob/leerob.io/edit/main/data/blog/${slug}.mdx`
+	`https://github.com/rsipakov/nextjs-pwa/edit/master/content/blog/${slug}.mdx`
 const discussUrl = (slug) =>
 	`https://mobile.twitter.com/search?q=${encodeURIComponent(
 		`https://leerob.io/blog/${slug}`
@@ -27,14 +28,14 @@ export default function BlogLayout({
 					<div className='flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center'>
 						<div className='flex items-center'>
 							<Image
-								alt='Blog'
+								alt='Avatar'
 								height={24}
 								width={24}
-								src='/avatar.jpg'
+								src='/static/images/avatar.png'
 								className='rounded-full'
 							/>
-							<p className='ml-2 text-sm text-gray-700 dark:text-gray-300'>
-								{'Blog / '}
+							<p className='ml-3 text-sm text-gray-700 dark:text-gray-300'>
+								{'Index / '}
 								{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
 							</p>
 						</div>
@@ -43,6 +44,20 @@ export default function BlogLayout({
 							{` • `}
 							<ViewCounter slug={post.slug} />
 						</p>
+					</div>
+					<div>
+						{post.tags && (
+							<div className="py-4 xl:py-8">
+								<h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+									Tags
+								</h2>
+								<div className="flex flex-wrap">
+									{post.tags.map((tag) => (
+										<Tag key={tag} text={tag} />
+									))}
+								</div>
+							</div>
+						)}
 					</div>
 					<div className='w-full mt-4 prose dark:prose-dark max-w-none'>
 						{children}

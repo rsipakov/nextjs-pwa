@@ -45,3 +45,4 @@ export async function getStaticProps({ params, locale }) {
 
 	return { props: { post, tweets } }
 }
+

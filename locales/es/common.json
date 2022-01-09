@@ -5,5 +5,8 @@
   },
   "blog": {
 	"title": "El blog"
+  },
+  "news": {
+	"title": "Noticias"
   }
 }

@@ -12,7 +12,7 @@ function classNames(...classes) {
 
 const links = [
 	{ label: 'Story', href: '/story' },
-	{ label: 'Recipes', href: '/recipes' },
+	{ label: 'Tweets', href: '/tweets' },
 	{ label: 'Blog', href: '/blog' }
 ]
 

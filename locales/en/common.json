@@ -5,5 +5,8 @@
   },
   "blog": {
 	"title": "Blog"
+  },
+  "news": {
+	"title": "News"
   }
 }
