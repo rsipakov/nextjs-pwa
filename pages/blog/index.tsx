@@ -33,13 +33,14 @@ export default function IndexNews({
 		<LayoutWrapper>
 			<Section>
 				<div className='flex flex-col items-start justify-center max-w-2xl mx-auto mb-16'>
+					{/* #region === Page's introduction with search panel === */}
 					<h1 className='mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'>
 						{t('blog.title')}
 					</h1>
 					<p className='mb-4 text-zinc-600 dark:text-zinc-400'>
 						{t('blog.intro1')}{' '}<span className='font-bold'>{`${posts.length}`}</span>{' '}{t('blog.intro2')}
 					</p>
-					<div className='relative w-full mb-4'>
+					<div className='relative w-full mb-4'> {/*FIXME: The search panel with class "relative" is superimposed on the navigation menu when the page scrolls.   */}
 						<input
 							aria-label='Search articles'
 							type='text'
@@ -62,6 +63,7 @@ export default function IndexNews({
 							/>
 						</svg>
 					</div>
+					{/* #endregion */}
 					<h3 className='mt-4 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
 						{t('blog.allTags')}
 					</h3>
@@ -83,7 +85,7 @@ export default function IndexNews({
 							)
 						})}
 					</div>
-					{/*//#endregion */}
+					{/* #endregion */}
 
 					<h3 className='mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white'>
 						{t('blog.allPosts')}
