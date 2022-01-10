@@ -18,9 +18,9 @@ module.exports = withPlugins([
 				'i.scdn.co', // Spotify Album Art
 				'pbs.twimg.com' // Twitter Profile Picture
 			]
-		}
+		},
+		withContentlayer
 	})],
-	[withContentlayer()]
 ])
 
 
