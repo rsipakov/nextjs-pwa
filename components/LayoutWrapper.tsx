@@ -11,6 +11,7 @@ import Head from 'next/head'
 import BottomNav from '@/components/bottom-nav'
 import NavBarSearch from '@/components/NavBarSearch'
 import React from 'react'
+import Header from '@/components/Header'
 
 interface Props {
 	title?: string

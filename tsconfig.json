@@ -11,6 +11,7 @@
 		"module": "esnext", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
 		"moduleResolution": "node", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
 		"resolveJsonModule": true,
+	  	"downlevelIteration": true, /* "new Set() with typescript" will work while targeting ES5, See more references: https://github.com/Microsoft/TypeScript/issues/21058 and https://stackoverflow.com/questions/33464504/using-spread-syntax-and-new-set-with-typescript*/
 		"isolatedModules": true, /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
 		"jsx": "preserve", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
 		"baseUrl": ".", /* Base directory to resolve non-absolute module names. */
@@ -18,7 +19,6 @@
 			"@/*": ["./*"]
 		},
 		"incremental": true, /* Enable incremental compilation */
-	  	"downlevelIteration": true /* "new Set() with typescript" will work while targeting ES5, See more references: https://github.com/Microsoft/TypeScript/issues/21058 and https://stackoverflow.com/questions/33464504/using-spread-syntax-and-new-set-with-typescript*/
 	},
 	"exclude": ["node_modules"],
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
