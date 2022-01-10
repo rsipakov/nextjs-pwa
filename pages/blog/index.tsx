@@ -10,7 +10,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Tag from '@/components/Tag'
 import path from 'path'
 import kebabCase from '@/lib/kebabCase'
-import CustomLink from '@/components/CustomLink'
+import CustomLink  from '@/components/CustomLink'
 
 
 export default function IndexNews({
@@ -80,7 +80,7 @@ export default function IndexNews({
 										className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
 									>
 										{` (${tags[ts]})`}
-									</CustomLink>
+									</CustomLink >
 								</div>
 							)
 						})}

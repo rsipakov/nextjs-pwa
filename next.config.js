@@ -1,15 +1,16 @@
-const withPlugins = require('next-compose-plugins');
-const withPWA = require('next-pwa');
-const runtimeCaching = require('next-pwa/cache');
-const { withContentlayer } = require('next-contentlayer');
-const { i18n } = require('./next-i18next.config');
+const withPlugins = require('next-compose-plugins')
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
+const { withContentlayer } = require('next-contentlayer')
+const { i18n } = require('./next-i18next.config')
 
+// === With PWA ===
 module.exports = withPlugins([
 	[withPWA({
 		pwa: {
 			dest: 'public',
 			runtimeCaching,
-			skipWaiting: true,
+			skipWaiting: true
 		},
 		i18n,
 		images: {
@@ -17,7 +18,19 @@ module.exports = withPlugins([
 				'i.scdn.co', // Spotify Album Art
 				'pbs.twimg.com' // Twitter Profile Picture
 			]
-		},
+		}
 	})],
 	[withContentlayer()]
-]);
+])
+
+
+// === Remove PWA ===
+// module.exports = withContentlayer()({
+//	i18n,
+//	images: {
+//		domains: [
+//			'i.scdn.co', // Spotify Album Art
+//			'pbs.twimg.com' // Twitter Profile Picture
+//		]
+//	},
+// });

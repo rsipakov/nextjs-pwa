@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import CustomLink from '@/components/CustomLink'
 import useSWR from 'swr'
 
 import fetcher from '@/lib/fetcher'
@@ -17,7 +17,7 @@ export default function BlogPost({
 
 	return (
 		<div className='w-full mb-4'>
-			<Link href={`/blog/${slug}`}>
+			<CustomLink  href={`/blog/${slug}`}>
 				<a className='w-full'>
 					<div className='w-full pb-2'>
 						<div className='flex flex-col justify-between md:flex-row'>
@@ -33,7 +33,7 @@ export default function BlogPost({
 						</p>
 					</div>
 				</a>
-			</Link>
+			</CustomLink >
 			<div className='flex flex-wrap'>
 				{tags.map((tag) => (
 					<Tag key={tag} text={tag} />

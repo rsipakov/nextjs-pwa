@@ -20,7 +20,7 @@ export default function NavBarSearch() {
 	const router = useRouter()
 
 	return (
-		<header className='pt-safe w-full bg-zinc-900 fixed top-0 left-0'>
+		<header className='pt-safe w-full sticky z-20 top-0 left-0'>
 			<Disclosure as='nav' className='px-safe bg-zinc-100 border-b dark:bg-zinc-900 dark:border-zinc-800'>
 				{({ open }) => (
 					<>
